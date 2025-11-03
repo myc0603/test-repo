@@ -1,0 +1,44 @@
+name: "✨ Feature: 새로운 기능 추가"
+description: "새로운 기능 개발 이슈를 생성할 때 사용하세요."
+title: "[Feature] "
+labels: ["feature", "todo"]
+assignees: []
+
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: "요약"
+      description: "무엇을 구현하려는지 한 문장으로 설명해주세요."
+      placeholder: "예: 숙소 검색 필터 기능 추가"
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: "상세 설명"
+      description: "기능의 목적, 동작 방식, 관련 문서나 화면 등을 설명해주세요."
+      placeholder: |
+        - 사용자는 검색 조건을 선택하여 숙소를 필터링할 수 있다.
+        - 가격, 지역, 인원 수 조건 포함.
+    validations:
+      required: true
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: "구체적 작업 목록"
+      description: "체크리스트 형태로 세부 구현 단계를 적어주세요."
+      placeholder: |
+        - [ ] API 엔드포인트 `/hotels/search` 설계
+        - [ ] 프론트 검색 조건 폼 구현
+        - [ ] 테스트 코드 작성
+    validations:
+      required: false
+
+  - type: textarea
+    id: etc
+    attributes:
+      label: "기타 참고사항"
+      description: "관련 이슈나 참고 링크가 있다면 추가해주세요."
